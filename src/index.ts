@@ -104,3 +104,33 @@ function sayHello(name: string): string {
 }
 
 console.log(sayHello('willian'))
+
+function logger(msg: string): void {
+  console.log(msg)
+}
+
+logger("Teste!")
+
+function greeting(name: string, greet?: string): void {
+  if (greet) {
+    console.log(`olá ${greet} ${name}`)
+    return
+  }
+  console.log(`olá ${name}`)
+}
+
+greeting('josé')
+greeting('pedro', "sir")
+
+//interface
+
+interface mathParametersFunction {
+  n1: number
+  n2: number
+}
+
+function sumNumbers(nums: mathParametersFunction) {
+return nums.n1 + nums.n2
+}
+
+console.log(sumNumbers({n1: 25, n2: 25}))
